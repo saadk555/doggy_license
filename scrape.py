@@ -18,7 +18,7 @@ def find(lstring):
             name = name.get_text()
             pip = pip.get_text()
             s = ''.join(str(links))
-            r = (r"https://github.com/[\w-]+/")
+            r = (r"https://github.com/[\w-]+/[\w-]+")
             reg = re.search(r,s)  
             home = reg.group()
             final = str(name.strip()) + '\n' + str(pip) + '\n' + str(home)
